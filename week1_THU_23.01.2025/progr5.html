@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 class="heading" id="heading1">Java Script</h1>
+        <p id="para" class="para1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis voluptates reiciendis
+            minus voluptas mollitia iure enim iusto inventore magnam provident explicabo eius tempora quo, odio at
+            praesentium delectus porro dolore.</p>
+        <button onClick='add()'>Changecolor</button>
+    </div>
+
+    <script>
+        // Переменные для текста и заголовка
+        let txt = document.getElementById('para').innerHTML;
+        let headercontent = document.getElementById('heading1').innerHTML;
+
+        // Замена текста заголовка
+        document.getElementById('heading1').innerHTML = 'HTML Introduction';
+
+        let h = document.getElementById('heading');
+
+        // Вывод текста абзаца в консоль
+        console.log(txt);
+
+        // Функция для изменения цвета текста
+        function add() {
+            let para = document.getElementById('para');
+            para.style.color = para.style.color === 'red' ? 'black' : 'red';
+        }
+    </script>
+</body>
+
+</html>
