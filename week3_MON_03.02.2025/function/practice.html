@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="practice.html">
+        <label for="num1">Enter the number</label>
+        <input type="text" name="" id="num1">
+
+
+        <button type="submit" onclick="display()">submit</button>
+    </form>
+
+    <script>
+        //Write a javascript that asks the user to input a number. The number is then passed into a function you write that contains a loop. The loop will loop the number you passed into the function and print out the word “ha” that many times. For instance, if I entered 3, the function would print out “ha ha ha”.
+
+        //Напишите javascript, который просит пользователя ввести число. Затем число передается в написанную вами функцию, содержащую цикл. Цикл будет повторять число, которое вы передали в функцию, и выводить слово «ha» столько раз. Например, если я введу 3, функция выведет «ha ha ha».
+
+        function display() {
+            alert('hiiiiiii')
+
+            let num = parseInt(document.getElementById('num1').value);
+            for (let i = 1; i <= num; i++) {
+                document.write('Ha' + "<br>")
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Write a javascript that asks the user to input a number. The number is then passed to a function. The function contains a loop that loops the number you’ve passed in (e.g., if the user entered 4, you loop 4 times). Each time you multiply the number by itself. When you are done, return the new number you calculated to the main program and print it out. (e.g., if you entered 3, you’d multiply 3x3x3, which would give you 27. 27 is the number you’d return to the main javascript. -->
+
+    <!-- Напишите javascript, который просит пользователя ввести число. Затем число передается в функцию. Функция содержит цикл, который повторяет переданное вами число (например, если пользователь ввел 4, вы выполняете цикл 4 раза). Каждый раз вы умножаете число само на себя. Когда вы закончите, верните новое число, которое вы вычислили, в основную программу и выведите его на печать. (например, если вы ввели 3, вы умножите 3x3x3, что даст вам 27. 27 — это число, которое вы вернете в основной javascript. -->
+
+    <form action="practice3.html">
+        <label for="num1">Enter the number</label>
+        <input type="text" name="" id="num1">
+
+
+        <button type="submit" onclick="display()">submit</button>
+    </form>
+
+    <script>
+        // Функция для умножения числа само на себя указанное количество раз
+        function powerSelf(num) {
+            let result = num; // Начинаем с введенного числа
+            for (let i = 1; i < num; i++) { // Повторяем (num - 1) раз
+                result *= num;
+            }
+            return result;
+        }
+
+        // Запрос числа у пользователя
+        let userInput = prompt("Введите число:");
+        let number = parseInt(userInput); // Преобразуем ввод в число
+
+        // Проверка на корректность ввода
+        if (!isNaN(number) && number > 0) {
+            let finalResult = powerSelf(number); // Вызываем функцию
+            alert("Результат: " + finalResult); // Выводим результат в alert
+            console.log("Результат:", finalResult); // Выводим результат в консоль
+        } else {
+            alert("Пожалуйста, введите положительное число!");
+        }
+
+
+    </script>
+</body>
+
+</html>

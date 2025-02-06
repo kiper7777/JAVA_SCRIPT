@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <label for="num1">Enter the first number</label>
+        <input type="text" name="" id="num1">
+
+        <label for="num2">Enter the second number</label>
+        <input type="text" name="" id="num2">
+
+        <button onclick="sum()">ADD</button>
+    </form>
+
+
+    <script>
+
+        //sum
+
+        function sum() {
+            let a = parseInt(document.getElementById("num1").value)
+            let b = parseInt(document.getElementById("num2").value)
+            let res = a + b;
+            // document.write("The result" + res);
+
+            document.write(`The result is ${res}`);
+        }
+        // sum(10, 20)
+
+
+
+    </script>
+</body>
+
+</html>

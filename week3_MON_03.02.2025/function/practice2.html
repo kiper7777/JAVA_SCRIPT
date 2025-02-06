@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function div(num1 = 300, num2 = 200) //default parameter
+        {
+            let res = num1 - num2;
+            let add = num1 + num2;
+            return res;
+        }
+        console.log(div(100, 20))
+
+        let substraction = div(80, 20);
+        console.log(`The result after substraction is ${substraction}`)
+
+        if (substraction >= 100) {
+            document.write('The number is big')
+        } else {
+            document.write('The number is not big')
+        }
+
+        let s = div(400)
+        console.log(`the default function ${s}`);
+
+    </script>
+</body>
+
+</html>
