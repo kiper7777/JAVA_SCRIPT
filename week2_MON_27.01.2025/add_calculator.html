@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form_add {
+            height: 200px;
+            width: fit-content;
+            border: 2px;
+            background-color: blanchedalmond;
+            padding: 20px;
+            display: flex;
+            margin: 30px auto;
+        }
+
+        .block {
+            display: flex;
+            flex-direction: row;
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px;
+        }
+
+        input:hover {
+            border: 2px solid purple;
+        }
+
+        button:hover {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form_add">
+        <form action="add_calculator.html" method="get">
+            <div class="block">
+                <label for="num_one">Enter the first number number1</label>
+                <input type="text" name="num_one" id="num_one">
+            </div>
+
+            <div class="block">
+                <label for="num_two">Enter the first number number1</label>
+                <input type="text" name="num_two" id="num_two">
+            </div>
+
+            <button onclick="add()">Add</button>
+
+        </form>
+        <div class="add_result" id="result_add"></div>
+    </div>
+
+    <script>
+        function add() {
+            let num1 = parseInt(document.getElementById("num_one").value);
+            let num2 = parseInt(document.getElementById("num_two").value);
+            let result = num1 + num2;
+
+            document.getElementById("result_add").innerHTML = result;
+            alert(result);
+
+            // document.getElementById("result_add").innerHTML = result;
+            console.log(result);
+        }
+    </script>
+</body>
+
+</html>

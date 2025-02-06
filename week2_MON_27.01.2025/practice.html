@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         1. Write a program to check which number is odd between three
+        // numbers
+
+        // let num1 = parseInt(prompt("Enter the first number"));
+        // let num2 = parseInt(prompt("Enter the second number"));
+        // let num3 = parseInt(prompt("Enter the third number"));
+
+        // function checkOdd(num) {
+        //     return num % 2 !== 0;
+        // }
+
+        // if (checkOdd(num1)) {
+        //     alert("The odd number is num1:" + num1)
+        // }
+
+        // if (checkOdd(num2)) {
+        //     alert("The odd number is num2:" + num2);
+        // }
+
+        // if (checkOdd(num3))
+        //     alert("The odd number is num3:" + num3);
+
+        // else {
+        //     alert("All numbers are even");
+        // }
+
+        // 2. Write a JavaScript program that accept two integers and display the
+        // larger
+
+        // let num1=Int(prompt(""))
+
+        // 3. Write a program to check the number is even or odd
+        // 4. Write a program to validate that someone is over 18 or not.age enter
+        // from the user side
+        // 5. Write a JavaScript conditional statement to find the largest of three
+        // numbers. Display an alert box to show the result
+        // 6. Write a JavaScript conditional statement to sort three numbers.
+        // Display an alert box to show the result
+
+        // Sample numbers : 0, -1, 4
+        // Output : 4, 0, -1
+
+
+        // Example
+
+        let num1 = 20;
+        let num2 = 13;
+        let num3 = 5;
+
+        if ((num1 > num2) && (num1 > num3)) {
+            document.write("num1 is greatest");
+        }
+        else if ((num2 > num1) && (num2 > num3)) {
+            document.write("the 2nd number" + num2 + "is greatest");
+        }
+        else {
+            document.write("num3 is greatest");
+        }
+
+
+        //Practice
+        // 1. Write a program to calculate the factorial of a number. Example: 5!=120
+
+        let n = 5;  // Число, для которого нужно вычислить факториал
+        let result = 1;
+        for (let i = 1; i <= n; i++) {
+            result *= i;
+        }
+        console.log(n + '! = ' + result);
+
+
+        // 2. Write a program to calculate Fibonacci series 0  1  1  2  3  5  8  13  21.
+        let n = 10;  // Количество чисел в ряду Фибоначчи (например, 10 чисел)
+        let fib1 = 0;  // Первое число ряда
+        let fib2 = 1;  // Второе число ряда
+        console.log(fib1);  // Выводим первое число (0)
+
+        for (let i = 1; i < n; i++) {
+            console.log(fib2);  // Выводим текущее число ряда
+            let nextFib = fib1 + fib2;  // Вычисляем следующее число
+            fib1 = fib2;  // Сдвигаем fib1 на следующее число
+            fib2 = nextFib;  // Обновляем fib2 на следующее число
+        }
+
+        // 3. Sum of numbers from 1 to 10
+        let sum = 0;
+        for (let i = 1; i <= 10; i++) {
+            sum += i;  // Прибавляем текущее число к сумме
+        }
+        console.log("Сумма чисел от 1 до 10: " + sum);
+
+
+
+    </script>
+</body>
+
+</html>
