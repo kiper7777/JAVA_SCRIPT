@@ -1,0 +1,72 @@
+<!-- Mini Project:
+Student grade calculator
+Each student has to enter respective subject marks.
+Find total
+Find percentage
+Find grade
+Check pass or fail
+Combined all and show output.
+
+Grade condition:
+80<=percentage<=100 🡺 grade A 60<=percentage<=79 🡺 Grade B 40<=percentage <=59 🡺Grade C Percentage<40 🡺 Fail
+
+Калькулятор оценок студентов Каждый студент должен ввести соответствующие баллы по предметам. Найти общую сумму
+Найти процент Найти оценку Проверить сдал или не сдал Объединить все и показать результат. Условие оценки:
+80<=процент<=100 🡺 оценка A 60<=процент<=79 🡺 оценка B 40<=процент <=59 🡺оценка C Процент<40 🡺
+Неудовлетворительно  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Ввод баллов по предметам
+        let subject1 = parseFloat(prompt("Введите баллы за предмет 1:"));
+        let subject2 = parseFloat(prompt("Введите баллы за предмет 2:"));
+        let subject3 = parseFloat(prompt("Введите баллы за предмет 3:"));
+        let subject4 = parseFloat(prompt("Введите баллы за предмет 4:"));
+        let subject5 = parseFloat(prompt("Введите баллы за предмет 5:"));
+
+        // Общая сумма баллов
+        let totalPoints = subject1 + subject2 + subject3 + subject4 + subject5;
+
+        // Количество возможных баллов для каждого предмета (например, 100 баллов на каждый предмет)
+        let maxPoints = 100 * 5; // 5 предметов, каждый по 100 баллов
+
+        // Расчёт процента
+        let percentage = (totalPoints / maxPoints) * 100;
+
+        // Определение оценки
+        let grade;
+        if (percentage >= 80) {
+            grade = "A";
+        } else if (percentage >= 60) {
+            grade = "B";
+        } else if (percentage >= 40) {
+            grade = "C";
+        } else {
+            grade = "Неудовлетворительно";
+        }
+
+        // Проверка, сдал ли студент
+        let passed = grade !== "Неудовлетворительно";
+
+        // Вывод результатов
+        console.log("Общая сумма баллов: " + totalPoints);
+        console.log("Процент: " + percentage.toFixed(2) + "%");
+        console.log("Оценка: " + grade);
+        console.log("Студент сдал: " + (passed ? "Да" : "Нет"));
+
+
+    </script>
+
+</body>
+
+</html>
