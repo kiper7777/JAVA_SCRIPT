@@ -125,11 +125,13 @@
             border-radius: 10px;
             padding: 20px;
             background-color: rgb(225, 221, 206);
-            margin-bottom: 50px;
+            margin-bottom: 70px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .signup label {
             font-size: 16px;
+            font-weight: 600;
             color: #5a5858;
             margin-top: 10px;
         }
@@ -137,23 +139,97 @@
         .signup-form input {
             border: 1px solid rgb(188, 185, 185);
             border-radius: 6px;
-            padding: 6px 8px;
-            margin-bottom: 16px;
+            padding: 8px;
+            /* margin-bottom: 14px; */
+            width: 100%;
+            font-size: 16px;
+            outline: none;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+        }
+
+        /* .signup-form span {
+            margin: 0 0 16px;
+        } */
+
+        .signup-form input:focus {
+            border-color: #0064f9;
+        }
+
+        .message .error {
+            font-size: 10px;
+            height: 6px;
+            margin-top: 6px;
+            display: none;
+        }
+
+        /* .error {
+            color: red;
+            font-size: 16px;
+            height: 6px;
+            display: block;
+            margin-bottom: 12px;
+        } */
+        .message {
+            color: gray;
+        }
+
+        .error {
+            color: red;
         }
 
         .user_info {
             display: flex;
-            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+        }
+
+        .user_info div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+        }
+
+        .signup-form label {
+            margin-bottom: 4px;
         }
 
         .signup-form button {
             background-color: #3A2A06;
             font-size: 18px;
+            font-weight: bold;
             color: #CD9441;
             border-radius: 8px;
-            margin-top: 20px;
+            margin-top: 30px;
             padding: 6px;
             width: auto;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .signup-form button:hover {
+            background-color: #777355;
+            color: white;
+            cursor: pointer;
+        }
+
+        .auth-buttons .login {
+            background-color: #3A2A06;
+            font-size: 16px;
+            font-weight: bold;
+            color: #CD9441;
+            border-radius: 8px;
+            padding: 10px;
+            width: auto;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .auth-buttons .login:hover {
+            background-color: #777355;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         footer {
@@ -955,20 +1031,24 @@
     <main>
         <section class="signup">
             <div>
-                <h2>Create an Account</h2>
+                <h2>Sign Up</h2>
                 <form action="register.php" method="POST" class="signup-form">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="youremail@gmail.com">
+                    <span class="message" id="emailMessage">For account activation and important updates</span>
+                    <span class="error" id="emailError"></span>
 
                     <div class="user_info">
                         <div>
                             <label for="username">Username</label>
                             <input type="text" id="username" name="username" required>
+                            <span class="error" id="nameError"></span>
                         </div>
 
                         <div>
                             <label for="password">Password</label>
                             <input type="password" id="password" name="password" required>
+                            <span class="error" id="passwordError"></span>
                         </div>
                     </div>
                     <div class="user_info">
@@ -1013,8 +1093,12 @@
                         </div>
                     </div>
 
-                    <button type="submit">Complete Sign Up</button>
+                    <button type="submit" id="submit" onclick="validation()">Complete Sign Up</button>
                 </form>
+
+                <script src="formvalidation.js">
+
+                </script>
             </div>
         </section>
     </main>
