@@ -144,12 +144,8 @@
             width: 100%;
             font-size: 16px;
             outline: none;
-            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+            box-sizing: border-box;
         }
-
-        /* .signup-form span {
-            margin: 0 0 16px;
-        } */
 
         .signup-form input:focus {
             border-color: #0064f9;
@@ -169,8 +165,14 @@
             display: block;
             margin-bottom: 12px;
         } */
-        .message {
+        .signup-form .message {
             color: gray;
+            display: none;
+        }
+
+        .user_info .message {
+            color: gray;
+            display: none;
         }
 
         .error {
@@ -1042,7 +1044,8 @@
                         <div>
                             <label for="username">Username</label>
                             <input type="text" id="username" name="username" required>
-                            <span class="error" id="nameError"></span>
+                            <span class="message" id="usernameMessage">Enter your username</span>
+                            <span class="error" id="usernameError"></span>
                         </div>
 
                         <div>

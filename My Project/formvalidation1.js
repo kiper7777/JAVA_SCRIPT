@@ -49,7 +49,7 @@ document.getElementById("submit").addEventListener("click", (e) => {
 
     // let name=document.getElementById('username').value;
     // let password=document.getElementById('password').value;
-    // isvalid=true;
+    // isValid=true;
     // console.log(email)
     // console.log(name)
     // console.log(password)
@@ -74,12 +74,12 @@ document.getElementById("submit").addEventListener("click", (e) => {
     // if(!name_match)
     //     {
     //         document.getElementById("nameError").innerHTML="Username is not valid";
-    //         isvalid=false;
+    //         isValid=false;
     //     }   
     // if(!password_match)
     //     {
     //         document.getElementById("passwordError").innerHTML="Password is not valid";
-    //         isvalid=false;
+    //         isValid=false;
     //     }     
 });
 
