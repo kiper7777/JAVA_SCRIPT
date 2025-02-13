@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare - Pet Care Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>PetCare</h1>
+            <nav>
+                <ul>
+                    <li><a href="#contact">Search Sitters</a></li>
+                    <li><a href="#about">Become a Sitter</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                </ul>
+            </nav>
+            <div class="auth_buttons">
+                <button class="signup" id="signupButton">Sign Up</button>
+                <button class="login" id="loginButton">Sign In</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero_container">
+            <h2>Find a reliable assistant for your pet in your area</h2>
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Enter your city">
+                <button type="submit">Find</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our services</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <h3>Dog walking</h3>
+                    <p>Find trusted dog walkers for your pet.</p>
+                </div>
+                <div class="service">
+                    <h3>Cat sitting</h3>
+                    <p>Trust your cat to experienced sitters.</p>
+                </div>
+                <div class="service">
+                    <h3>Animal care</h3>
+                    <p>A full range of services for the care of your pet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>PetCare - is a platform that helps pet owners find reliable people to walk, care for and babysit their
+                pets.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contacts</h2>
+            <p>Please contact us if you have any questions or suggestions.</p>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your name">
+                <input type="email" id="email" placeholder="Your email">
+                <textarea id="message" placeholder="Your message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 PetCare. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
