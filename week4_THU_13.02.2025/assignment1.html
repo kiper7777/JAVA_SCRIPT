@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo in autem unde voluptatum sed
+        corporis enim.
+        Officiis magnam exercitationem voluptatem id soluta mollitia aperiam vel blanditiis explicabo! Ad, omnis ullam?
+    </p>
+    <button onclick="ChangeBackgroundColor()">Change background color</button>
+    <button onclick="ChangeFontSize()">Change font size</button>
+
+    <script>
+        function ChangeBackgroundColor() {
+            document.getElementById("paragraph").style.backgroundColor = "red";
+        }
+
+        function ChangeFontSize() {
+            document.getElementById("paragraph").style.fontSize = "30px";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <select name="colour" id="colour" onchange="changeBackgroundColor()">
+            <option value="" selected>Select a colour</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+    </form>
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum porro illum odio sit, natus nesciunt quasi
+            dolor asperiores accusamus, iste libero eum voluptatum qui, enim inventore. Aliquam nihil suscipit debitis!
+        </p>
+    </div>
+
+    <script>
+        function changeBackgroundColor() {
+            let color = document.getElementById("colour").value;
+
+            if (color === "red") {
+                document.getElementById("box").style.backgroundColor = "red";
+            } else if (color === "blue") {
+                document.getElementById("box").style.backgroundColor = "blue";
+            } else if (color === "green") {
+                document.getElementById("box").style.backgroundColor = "green";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
