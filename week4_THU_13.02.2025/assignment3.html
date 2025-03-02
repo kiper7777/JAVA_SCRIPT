@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #programList {
+            list-style-type: disc;
+            padding-left: 20px;
+            font-size: 20px;
+        }
+
+        #programList li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Choose the color scheme for the list</h1>
+
+    <!-- Dropdown for background and font color selection -->
+    <label for="fontColor">Select Font Color:</label>
+    <select id="fontColor">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="orange">Orange</option>
+    </select>
+
+    <label for="bgColor">Select Background Color:</label>
+    <select id="bgColor">
+        <option value="white">White</option>
+        <option value="yellow">Yellow</option>
+        <option value="lightgray">Light Gray</option>
+        <option value="lightblue">Light Blue</option>
+        <option value="pink">Pink</option>
+    </select>
+
+    <!-- Button to apply the colors -->
+    <button onclick="applyColors()">Submit</button>
+
+    <h2>Programming Languages</h2>
+
+    <!-- List of programming languages -->
+    <ul id="programList">
+        <li>Java</li>
+        <li>Python</li>
+        <li>PHP</li>
+        <li>C++</li>
+    </ul>
+
+    <script>
+        // Function to apply the selected font and background colors
+        function applyColors() {
+            // Get selected font and background colors
+            let fontColor = document.getElementById('fontColor').value;
+            let bgColor = document.getElementById('bgColor').value;
+
+            // Apply the selected font color to the list
+            document.getElementById('programList').style.color = fontColor;
+
+            // Apply the selected background color to the list
+            document.getElementById('programList').style.backgroundColor = bgColor;
+        }
+    </script>
+
+</body>
+
+</html>
