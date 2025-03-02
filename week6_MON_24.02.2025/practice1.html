@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Write a program using the array map() method to concatenate the character ‘A’ with every character of the name. -->
+
+    <script>
+        let name = "LONDON";
+        let modifiedNameArray = name.split("").map(char => "A" + char);
+        let modifiedName = modifiedNameArray.join("");
+
+        console.log(modifiedName);
+
+        // Write a program to create a array of SAE students object which contain the student details including course name  then  find out web students and concatenate the  course name web with every students name. Output should be like following:
+        //         let studentLon = [{ name: 'Robi', lname: 'kate', course: 'web' },
+        //         { name: 'john', lname: 'smith', course: 'film' },
+        //         { name: 'Bob', lname: 'kate', course: 'Game' },
+        //         { name: 'Robbin', lname: 'asmin', course: 'web' },
+        //         { name: 'Danik', lname: 'asmin', course: 'Game' }
+        //         ]
+
+        let studentLon = [
+            { name: 'Robi', lname: 'Kate', course: 'web' },
+            { name: 'John', lname: 'Smith', course: 'film' },
+            { name: 'Bob', lname: 'Kate', course: 'Game' },
+            { name: 'Robbin', lname: 'Asmin', course: 'web' },
+            { name: 'Danik', lname: 'Asmin', course: 'Game' }
+        ];
+        let web_stu = studentLon.map((student) => {
+            if (student.course === 'web') {
+                return student.name + " " + student.course
+            } else {
+                return student.name;
+            }
+
+        });
+
+        console.log(web_stu);
+
+
+
+    </script>
+</body>
+
+</html>

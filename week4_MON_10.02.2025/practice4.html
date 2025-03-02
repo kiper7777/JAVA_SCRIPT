@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="greetingForm">
+        <h1>Welcome to array</h1>
+        <label for="fname">FirstName</label>
+        <input type="text" name="fname" id="fname" required>
+
+        <label for="lname">LastName</label>
+        <input type="text" name="lname" id="lname" required>
+
+        <button type="button" onclick="greeting()">Submit</button>
+    </form>
+
+    <p id="greetingMessage"></p>
+
+    <script>
+        function greeting() {
+            let fname = document.getElementById("fname").value;
+            let lname = document.getElementById("lname").value;
+
+            if (fname && lname) {
+                document.getElementById("greetingMessage").innerHTML = 'Hello, ' + fname + ' ' + lname;
+            } else {
+                document.getElementById("greetingMessage").innerHTML = 'Please fill in both fields!';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,4 +1,3 @@
-var carName;
-carName='BMW';
+let carName = "BMW";
 
-console.log(carName);
+console.log("carName:", carName);

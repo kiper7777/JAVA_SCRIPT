@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let student = new Object();
+        student.name = "John";
+        student.course = "Web";
+        document.write(student)
+        console.log(student)
+        document.write(student['name']);
+
+        let emp = {
+            name: "John",
+            lname: "Smith",
+            lang: ['C++', 'Java', 'Python', 'PHP'],
+            fullname: function () {
+                return this.name + this.lname
+            }
+        }
+
+        let fname = emp.fullname();
+        console.log(fname)
+
+        let studentLon = [
+            { name: 'Dan', lname: 'Kate', course: 'web' },
+            { name: 'John', lname: 'Smith', course: 'film' },
+            { name: 'Bob', lname: 'Kate', course: 'game' },
+            { name: 'Tom', lname: 'Asmin', course: 'web' }
+        ]
+        console.log(studentLon)
+
+        for (let i = 0; i < studentLon.length; i++) {
+            console.log(studentLon[i].name)
+            console.log("************")
+        }
+
+
+
+        // console.log(emp.fullname())
+
+        //how to add new property into the object
+        // emp.age = 32;
+        // console.log(emp)
+
+        // delete emp.lname
+        // console.log(emp)
+
+        console.log("************")
+
+        //array_method
+        let num = [10, 20, 30, 40];
+        let new_num = num.map(multiplicationNos);
+        console.log(new_num)
+        for (let j = 0; j < new_num.length; j++) {
+            document.write(`${new_num[j]} <br>`)
+        }
+
+        for (let n in new_num) {
+            document.write(new_num[n])
+        }
+
+        function multiplicationNos(x) {
+            let n = x * 2;
+            return n;
+        }
+        //
+        let new_num1 = num.map((x) => {
+            let n = x * x;
+            return n;
+        })
+
+        for (let m = 0; m < new_num1.length; m++) {
+            document.write(`${new_num1[m]} <br>`)
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

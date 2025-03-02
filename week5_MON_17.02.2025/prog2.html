@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            color: blue;
+        }
+
+        .xyz {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header" id="heading" style="border: 1px solid red;">
+        <h1 id="h">DOM</h1>
+    </div>
+
+
+    <div class="header">
+        <h1 id="nav">Navigation</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor alias quis harum molestias. Et ut delectus
+            temporibus iusto sit at dolorem architecto dolores reiciendis est, rerum molestias voluptate ab illo.</p>
+    </div>
+
+    <img src="/images/dog2.jpg" alt="">
+
+    <script>
+        console.log(document);
+        let data = document.getElementById("heading").innerHTML;
+        console.log(data);
+
+        let data1 = document.getElementsByClassName("header")[1].innerHTML;
+        console.log(data1);
+
+        let data2 = document.getElementsByTagName("h1")[0].innerText;
+        console.log(data2);
+
+        console.log(document.domain);
+
+        console.log(document.title);
+        document.title.innerHTML = "Javascript";
+
+
+        console.log(document.link);
+        console.log(document.URL);
+        console.log(document.doctype);
+        console.log(document.head);
+        console.log(document.body);
+        console.log(document.ima);
+
+
+        document.getElementsById("h").innerHTML = "<h1> SAE </h1";
+        let data3 = document.getElementById("h").innerText
+        console.log(data3)
+
+        document.getElementsById("nav").innerText = "<h1> SAE </h1";
+        let data4 = document.getElementById("nav").innerText
+        console.log(data4);
+
+
+        document.getElementById("heading").setAttribute("class", "xyz")
+        console.log(name)
+
+
+        document.querySelector("#h")
+
+    </script>
+
+</body>
+
+</html>

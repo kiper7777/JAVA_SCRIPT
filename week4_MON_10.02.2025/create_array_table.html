@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div></div>
+
+    <script>
+        //Multidimensional or 2D array
+        let emp = [
+            [101, "John", "frontend developer"],
+            [102, "Dom", "backend developer"],
+            [109, "Harry", "fullstack developer"]
+        ]
+        document.write(emp + "<br>");
+        document.write(emp[0][1]);
+
+        for (let row = 0; row <= 2; row++) //row 
+        {
+            document.write("<tr>")
+            for (let col = 0; col <= 2; col++) {
+                document.write("<td>" + emp[row][col] + "<td>")
+            }
+            document.write("</tr>")
+        }
+        document.write("</table>")
+
+
+    </script>
+</body>
+
+</html>

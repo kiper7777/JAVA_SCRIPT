@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- The following code displays one of 5 random pictures whenever you click on the button in your html code (with the
+    picture names being kit1.jpg, kit2.jpg, kit3.jpg, kit4.jpg, and kit5.jpg) -->
+
+
+    <button onclick="showRandomImage()">Show random image</button>
+    <br><br>
+    <img id="randomImage" src="/" alt="The picture will appear here" width="300" border="1px solid black">
+
+
+    <script>
+        function showRandomImage() {
+            let images = ["kit1.jpg", "kit2.jpg", "kit3.jpg", "kit4.jpg", "kit5.jpg"];
+            let randomIndex = Math.floor(Math.random() * images.length); // Random index from 0 to 4
+            document.getElementById("randomImage").src = images[randomIndex];
+        }
+    </script>
+
+</body>
+
+</html>

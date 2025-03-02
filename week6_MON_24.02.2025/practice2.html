@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.Write a simple JavaScript program to join all elements of the following array into a string.
+        let colors = ["Red", "Green", "White", "Black"];
+
+        let output1 = colors.join(",");
+        let output2 = colors.join(", ");
+        let output3 = colors.join("+");
+
+        console.log(output1);
+        console.log(output2);
+        console.log(output3);
+
+        // 2.Write a program to merge three array together and display the array elements.
+        let arr1 = [1, 2, 3];
+        let arr2 = ["a", "b", "c"];
+        let arr3 = ["Red", "Green", "Blue"];
+
+        // Merging all three arrays using concat()
+        let mergedArray = arr1.concat(arr2, arr3);
+        console.log(mergedArray);
+
+
+        // 3.Write a program to add 5 values to the existing array with elements 100,’SAE’,200,true,[10,20]
+        let myArray = [100, "SAE", 200, true, [10, 20]];
+        myArray.push(300, "Web", false, { key: "value" }, [30, 40]);
+        console.log(myArray);
+
+
+
+    </script>
+</body>
+
+</html>

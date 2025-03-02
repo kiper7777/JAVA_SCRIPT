@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="para" class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio non id dolor tempore maxime!
+    </p>
+    <form action="" method="get">
+        <button type="button" id="btn">Click</button>
+    </form>
+
+    <script>
+        // function display() {
+        //     let data = document.querySelector("#para").innerHTML
+        //     console.log(data)
+        // }
+
+        document.querySelector("#btn").onclick = display;
+
+        function display() {
+            let data = document.querySelector("#para").innerHTML
+            console.log(data)
+        }
+
+
+        document.querySelector("#btn").addEventListener("click", display)
+        function display() {
+            document.querySelector("#para").innerHTML = "<h1> We are in class </h1>"
+            let data = document.querySelector("#para").innerHTML
+            console.log(data);
+        }
+
+
+        document.querySelector("#btn").addEventListener("click", function () {
+            document.querySelector("#para").innerHTML = "<h1> We are in class doing</h1>"
+            let data = document.querySelector("#para").innerText
+            console.log(data);
+        })
+    </script>
+
+</body>
+
+</html>

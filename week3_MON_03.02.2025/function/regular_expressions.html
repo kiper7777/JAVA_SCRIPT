@@ -8,14 +8,47 @@
 </head>
 
 <body>
-
-
     <script>
         let regex = /very/g
         let st = "good after noon every one."
-        let res = regex.exec(st); //it will return array if mutch or null if it is not mutch
-
+        let res = regex.exec(st); //it will return array if match or null if it is not match
         console.log(res);
+    </script>
+
+    <script>
+        let reg = /SAE/;
+        let s = "I am in SAE";
+        var result = reg.exec(s);
+        console.log(result);
+    </script>
+
+    <script>
+        let reg1 = /SAE/;
+        let s1 = "I am in SAE now. I am doing web course in Sae";
+        let result1 = reg1.test(s1);
+        console.log(result1);
+    </script>
+
+    <script>
+        let reg2 = /SAE/;
+        let s2 = "I am in SAE.I am doing web course in Sae";
+        let result2 = s.match(reg2);
+        console.log(result2);
+    </script>
+
+    <script>
+        let reg3 = /SAE/;
+        let s3 = "I am in SAE.I am doing web course in Sae";
+        let result3 = s3.search(reg3);
+        console.log(result3);
+    </script>
+
+    <script>
+        let reg4 = /SAE/gi;
+        let s4 = "I am in SAE.I am doing web course in Sae";
+        let result4 = s4.replace(reg4, 'SAE London');
+        console.log(result4);
+
     </script>
 
 </body>

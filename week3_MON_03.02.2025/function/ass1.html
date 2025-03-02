@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Показ даты и времени</title>
+</head>
+
+<body>
+    <!-- Write an html page that contains a button that, when you click on it, it displays a date and time in an alert box.
+    The date and time should be displays as follows: Sunday, April 9, 3:27:3 pm. A couple of notes on this one: the body
+    of your html page should look like this: Where “Name Of Function You Wrote To Display The Date()” will be replaced
+    with the (hopefully) shorter name you gave to the function you will write to display the date. -->
+    <!-- Напишите html-страницу, содержащую кнопку, которая при нажатии на которую отображает дату и время в окне оповещения. Дата и время должны отображаться следующим образом: воскресенье, 9 апреля, 3:27:3 pm. Пара замечаний по этому поводу: тело вашей html-страницы должно выглядеть следующим образом: Где «Имя функции, которую вы написали для отображения даты()» будет заменено на (надеюсь) более короткое имя, которое вы дали функции, которую вы напишете для отображения даты. -->
+
+    <button onclick="showDateTime()">Показать дату и время</button>
+
+    <script>
+        function showDateTime() {
+            let now = new Date();
+
+            // Дни недели
+            let days = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
+            let dayName = days[now.getDay()];
+
+            // Месяцы
+            let months = ["января", "февраля", "марта", "апреля", "мая", "июня",
+                "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+            let monthName = months[now.getMonth()];
+
+            let day = now.getDate();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+
+            // Преобразуем 24-часовой формат в 12-часовой
+            let ampm = hours >= 12 ? "pm" : "am";
+            hours = hours % 12 || 12; // Преобразуем 0 часов в 12
+
+            // Формируем строку даты
+            let dateTimeString = `${dayName}, ${day} ${monthName}, ${hours}:${minutes}:${seconds} ${ampm}`;
+
+            alert(dateTimeString);
+        }
+    </script>
+
+</body>
+
+</html>

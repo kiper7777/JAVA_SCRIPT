@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div></div>
+
+    <script>
+        //array is a collection of multiple values
+
+        let ary = [10, 20, 30, 40, 50];
+
+        //how we can display the ary element
+        document.write(ary);
+        let l = ary.length
+
+        //access single element
+        document.write("<br>" + ary[2] + "<br>");
+
+        //using for loop
+        document.write("array element <br>");
+        for (i = 0; i < ary.length[i]; i++) {
+            document.write(` ${ary[i]} <br>`)
+        }
+
+
+
+        //Multidimensional or 2D array
+        let emp = [
+            [101, "John", "frontend developer", "<br>"],
+            [102, "Dom", "backend developer", "<br>"],
+            [109, "Harry", "fullstack developer", "<br>"]
+        ]
+        document.write(emp + "<br>");
+        document.write(emp[0][1]);
+
+        for (let row = 0; row <= 2; row++) //row 
+        {
+            for (let col = 0; col <= 2; col++) {
+                document.write(emp[row][col])
+            }
+            document.write("<br>")
+        }
+
+    </script>
+</body>
+
+</html>

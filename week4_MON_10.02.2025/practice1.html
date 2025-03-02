@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.Write a simple JavaScript program to join all elements of the following array into a string.
+        // Output:
+        // Red, Green, White, Black
+        // Red Green White Black
+        // Red + Green + White + Black
+
+
+        let colors = ['Red', 'Green', 'White', 'Black'];
+        // Join elements with commas
+        let commaSeparated = colors.join(',');
+        console.log(commaSeparated);
+
+        // Join elements with a space (for a similar output, but using the default behavior)
+        let spaceSeparated = colors.join(' ');
+        console.log(spaceSeparated);
+
+        // Join elements with plus signs
+        let plusSeparated = colors.join('+');
+        console.log(plusSeparated);
+
+    </script>
+
+</body>
+
+</html>
