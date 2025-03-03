@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // let student={
+        //     name: "Robbin",
+        //     age: 32
+        // }
+
+        // let student = {
+        //     [{ name: "Robbin", age: 32 },
+        //         { name: "Robbin", age: 32 },
+        //         { name: "Robbin", age: 32 }
+        //     ]
+        // }
+
+        let emp = {
+            name: "John",
+            age: 32,
+        }
+
+        console.log(emp)
+        // console.log(JSON.stringify(emp));
+
+        let emp_str = JSON.stringify(emp); //JSON
+        console.log(emp_str);
+        console.log(typeof (emp_str))
+
+        console.log(JSON.parse(emp_str))
+        console.log(typeof (emp))
+
+
+
+
+        let st = '{"name":"John", "age":"30", "car":null}'
+        // console.log(st.name) //it gives error as it JSON string
+
+        let stu = JSON.parse(st); //convert into an object
+        console.log(stu.name)
+
+
+
+    </script>
+</body>
+
+</html>
