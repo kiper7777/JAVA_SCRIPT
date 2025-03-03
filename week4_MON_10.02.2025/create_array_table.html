@@ -12,27 +12,34 @@
     <div></div>
 
     <script>
-        //Multidimensional or 2D array
+        // Multidimensional or 2D array
         let emp = [
             [101, "John", "frontend developer"],
             [102, "Dom", "backend developer"],
             [109, "Harry", "fullstack developer"]
-        ]
+        ];
+
         document.write(emp + "<br>");
         document.write(emp[0][1]);
 
-        for (let row = 0; row <= 2; row++) //row 
-        {
-            document.write("<tr>")
-            for (let col = 0; col <= 2; col++) {
-                document.write("<td>" + emp[row][col] + "<td>")
+        // Create the table
+        document.write("<table border='1'>");
+
+        // Loop through each row
+        for (let row = 0; row < emp.length; row++) {
+            document.write("<tr>");  // Start a new row
+
+            // Loop through each column in the row
+            for (let col = 0; col < emp[row].length; col++) {
+                document.write("<td>" + emp[row][col] + "</td>"); // Add a new cell
             }
-            document.write("</tr>")
+
+            document.write("</tr>");  // End the row
         }
-        document.write("</table>")
 
-
+        document.write("</table>");  // End the table
     </script>
+
 </body>
 
 </html>

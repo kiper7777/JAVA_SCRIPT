@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE Students</title>
+</head>
+
+<body>
+
+    <h1>SAE Students with Web Course</h1>
+    <p id="output"></p>
+
+    <script>
+        // Array of SAE students with course details
+        let studentLon = [
+            { name: 'Robi', lname: 'Kate', course: 'web' },
+            { name: 'John', lname: 'Smith', course: 'film' },
+            { name: 'Bob', lname: 'Kate', course: 'Game' },
+            { name: 'Robbin', lname: 'Asmin', course: 'web' },
+            { name: 'Danik', lname: 'Asmin', course: 'Game' }
+        ];
+
+        // Find web students and concatenate the course name 'web' to their name
+        let modifiedStudents = studentLon.map(student => {
+            if (student.course === 'web') {
+                student.name = student.name + ' web';  // Concatenate 'web' to their name
+            }
+            return student;
+        });
+
+        // Display the modified student list
+        document.getElementById('output').textContent = JSON.stringify(modifiedStudents, null, 2);
+    </script>
+
+</body>
+
+</html>

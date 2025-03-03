@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenate 'A' to Name</title>
+</head>
+
+<body>
+
+    <h1>Concatenate 'A' with Each Character of Name</h1>
+    <p id="output"></p>
+
+    <script>
+        // Function to add 'A' to each character of the name
+        function addAtoEachChar(name) {
+            // Convert the name into an array of characters using split()
+            const nameArray = name.split('');
+
+            // Use map() to concatenate 'A' to each character
+            const modifiedArray = nameArray.map(char => char + 'A');
+
+            // Join the modified array back into a string and return it
+            return modifiedArray.join('');
+        }
+
+        // Test the function
+        const name = "John"; // Example name
+        const result = addAtoEachChar(name);
+
+        // Display the result
+        document.getElementById('output').textContent = `Modified Name: ${result}`;
+    </script>
+
+</body>
+
+</html>

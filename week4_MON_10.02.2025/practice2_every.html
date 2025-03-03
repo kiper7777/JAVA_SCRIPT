@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>every() Method Example</title>
+</head>
+
+<body>
+
+    <h1>Check if all numbers are positive</h1>
+    <p id="result"></p>
+
+    <script>
+        // Функция для проверки, является ли число положительным
+        function isPositive(num) {
+            return num > 0;
+        }
+
+        // Массив чисел
+        let numbers = [2, -4, 6, 8, 10];
+
+        // Используем метод every() для проверки, являются ли все элементы положительными
+        let result = numbers.every(isPositive);
+
+        // Отображаем результат
+        document.getElementById("result").textContent = result ? "All numbers are positive." : "Not all numbers are positive.";
+    </script>
+
+</body>
+
+</html>

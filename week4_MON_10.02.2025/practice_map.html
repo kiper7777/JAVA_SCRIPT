@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map() Method Example</title>
+</head>
+
+<body>
+    <!-- Write a program using map() to  converting string to integer so that
+Note :we are using parseint() with map() function. -->
+
+
+    <h1>Convert Strings to Integers using map() and parseInt()</h1>
+    <p id="output"></p>
+
+    <script>
+        // Массив строк
+        let stringArray = ["10", "20", "30", "40", "50"];
+
+        // Преобразование строк в целые числа с использованием map() и parseInt()
+        let integerArray = stringArray.map(str => parseInt(str));
+
+        // Отображаем результат
+        document.getElementById("output").textContent = `Converted Array: ${integerArray}`;
+    </script>
+
+</body>
+
+</html>
