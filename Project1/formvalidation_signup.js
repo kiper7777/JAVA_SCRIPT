@@ -1,3 +1,4 @@
+
 let emailInput = document.getElementById("email");
 let emailMessage = document.getElementById("emailMessage");
 let emailError = document.getElementById("emailError");
