@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1. Write a JavaScript function to get the values of First and Last name and display Hi firstname lastName Example:Hi John smith -->
+
+    <script>
+        function greetUser(firstName, lastName) {
+            const greeting = `Hi ${firstName} ${lastName}`;
+            console.log(greeting);
+        }
+        greetUser('John', 'Smith');
+    </script>
+
+
+    <!-- 2.Write a JavaScript program to calculate the volume of a sphere. Sample Output of the form : -->
+
+    <div>
+        <h3>Input radius value and get the volume of a sphere</h3>
+        <div>
+            <label for="radius">Radius:</label>
+            <input type="number" id="radius" placeholder="Enter radius">
+        </div>
+        <span id="result"></span>
+        <button onclick="calculateSphereVolume()">Calculate</button>
+    </div>
+
+    <script>
+        function calculateSphereVolume() {
+            // Get the radius input value
+            const radius = document.getElementById('radius').value;
+
+            // Check if the radius is a valid number
+            if (radius && radius > 0) {
+                // Calculate the volume of the sphere using the formula
+                const volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
+
+                // Display the result in the span
+                document.getElementById('result').innerText = `The volume of the sphere with radius ${radius} is ${volume.toFixed(2)} cubic units.`;
+            } else {
+                // If the radius is not valid, show an error message
+                document.getElementById('result').innerText = "Please enter a valid positive radius.";
+            }
+        }
+    </script>
+
+    <!-- 3.Write a JavaScript program to count and display the items of a dropdown list, in an alert window. -->
+
+
+</body>
+
+</html>

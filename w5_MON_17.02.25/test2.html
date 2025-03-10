@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="heading" id="heading"> I am in DOM </h1>
+        <p class="para" id="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit quod ad, vero atque quia? Recusandae
+            tenetur,necessitatibus maiores numquam aspernatur pariatur modi rerum
+            atque nobis reprehenderit aliquid, dolore sint!
+
+            Hello!
+
+        </p>
+        <nav>
+            <ul id="freelancer">
+                <li class="item">Name</li>
+                <li class="item">Skills</li>
+                <li class="item price">Cost</li>
+                <li class="item">Projects</li>
+            </ul>
+        </nav>
+
+        <ul>
+            <li class="list">PHP</li>
+            <li class="list">PHP</li>
+            <li class="list">PHP</li>
+        </ul>
+
+        <ul>
+            <li class="list-item">Java</li>
+            <li class="list-item">Java</li>
+            <li class="list-item">Java</li>
+        </ul>
+
+    </header>
+    <script>
+
+        var n = document.getElementsByClassName("para");
+        n[0].innerHTML = 'London';
+
+        var collection = document.getElementsByClassName("item");
+        collection[0].innerHTML = 'FirstName'
+
+
+        var items = document.getElementsByClassName('list')
+        console.log(items[0].innerHTML)
+        console.log(items[1].innerHTML)
+        console.log(items[2].innerHTML)
+        items[1].innerHTML = 'Java'
+        items[1].style.color = 'green'
+        items[1].style.fontWeight = 'bold'
+
+
+        var items2 = document.getElementsByClassName('list-item');
+        console.log(items2)
+        for (i = 0; i < items2.length; i++) {
+            document.write(items2[i].textContent, "<br>")
+        }
+
+        var collection = document.getElementsByTagName('li')
+        collection[8].textContent = 'deep blue'
+        collection[8].style.fontWeight = 'bold'
+        console.log(collection)
+
+
+        var items = document.getElementsByClassName('list-item');
+        console.log(items[0])
+        items[0].style.color = "red"
+        items[0].style.fontWeight = "bold"
+        items[0].style.backgroundColor = "blue";
+
+
+        for (i = 0; items.length; i++) {
+            items[i].style.color = 'orange';
+        }
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

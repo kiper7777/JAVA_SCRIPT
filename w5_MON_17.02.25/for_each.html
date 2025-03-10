@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // foreach
+
+        let numbers = [1, 2, 3, 4, 5, 6, 7]
+        numbers.forEach(double)
+        numbers.forEach(display)
+
+
+        function display(elements) {
+            console.log(elements)
+        }
+
+        function double(elements) {
+            elements = elements * 2
+        }
+
+        let lang = ['C++', 'Java', 'PHP', 'Python']
+        function displayElements(elements, index, array) {
+            document.write(index, elements + "<br>")
+        }
+
+        lang.forEach(displayElements)
+
+
+        let num = [10, 20, 30, 40]
+        num.forEach(function (elements) {
+            console.log(elements)
+        })
+
+
+    </script>
+
+</body>
+
+</html>

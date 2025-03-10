@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change colors of paragraphs</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p id="para1">First paragraph!</p>
+        <p id="para2">Second paragraph?</p>
+        <p id="para3">Third paragraph.</p>
+        <p id="para4">Fourth paragraph!</p>
+    </div>
+    <button id="submitBtn">Submit</button>
+
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", function () {
+            const colors = ["red", "blue", "green", "orange"];
+            const paragraphs = document.querySelectorAll("p");
+
+            paragraphs.forEach((para, index) => {
+                para.style.color = colors[index];
+            });
+        });
+    </script>
+</body>
+
+</html>

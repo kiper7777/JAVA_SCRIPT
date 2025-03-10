@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header" id="header" style="color: blue;">
+        <h1 class="heading" id="heading"> I am in DOM </h1>
+        <h2 id="h2">Hello everybody</h2>
+        <p class="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Sit velit quod ad, vero atque quia? Recusandae tenetur,
+            necessitatibus maiores numquam aspernatur pariatur modi rerum
+            atque nobis reprehenderit aliquid, dolore sint!</p>
+    </header>
+
+
+    <script>
+        var n = document.getElementById("heading").innerHTML;
+        console.log(n)
+
+        document.getElementById("heading").innerHTML = "Document Object Model"
+
+
+        var att = document.getElementById('heading').getAttribute('class')
+        console.log(att)
+
+        var att = document.getElementById('header').getAttribute('id')
+        console.log(att)
+
+        var att = document.getElementById('header').getAttributeNode('style')
+        console.log(att)
+
+        var elementh = document.getElementById('header').getAttributeNode('class')
+        console.log(elementh)
+
+
+        var attri = document.getElementById('header').attributes
+        console.log(attri)
+
+        var attri = document.getElementById('header').attributes[2]
+        console.log(attri)
+
+        var attri = document.getElementById('header').attributes[1].value
+        console.log(attri)
+
+        document.getElementById('h2').innerHTML = 'This is my first program>'
+
+        document.getElementById('h2').setAttribute('class', 'sae');
+        var element = document.getElementById('h2').getAttribute('class')
+        console.log(element)
+
+        document.getElementById('h2').setAttribute('style', 'border:4px dotted red')
+
+        document.getElementById('header').attributes[0].value = 'heading'
+
+        // document.getElementById('header').removeAttribute('style')
+
+
+    </script>
+
+</body>
+
+</html>
