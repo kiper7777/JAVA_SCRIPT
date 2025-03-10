@@ -1,0 +1,18 @@
+[{
+    "name":"Bob",
+    "age":28,
+    "course":["C++","JS","PHP","Java"],
+    "dept":"web"
+},
+{
+    "name":"Robin",
+    "age":35,
+    "course":["C++","Python","PHP","Java"],
+    "dept":"web"
+},
+{
+    "name":"Tom",
+    "age":42,
+    "course":["C++","MySQL","PHP","Java"],
+    "dept":"web"
+}]

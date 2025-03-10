@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid red;
+        }
+
+        td,
+        th {
+            padding: 10px;
+            border-bottom: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" id="btn">Fetch Data</button>
+    <p id="para"></p>
+    <p id="para2"></p>
+
+    <table>
+        <th>UserId</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+    </table>
+
+    <script>
+        let btn = document.getElementById("btn");
+        let para = document.getElementById("para");
+        let para2 = document.getElementById("para2");
+
+        btn.addEventListener("click", display)
+        function display() {
+            alert("hi")
+
+            let xhr = new XMLHttpRequest();
+
+            xhr.open("get", "data3.json", true)
+
+            xhr.onprogress = function () {
+                console.log("The process in progress")
+            }
+
+            xhr.onload = function () {
+                // console.log(xhr.responseText)
+
+                let ourdata = xhr.responseText;
+                ourdatadisplay(ourdata)
+            }
+            xhr.send();
+        }
+        function ourdatadisplay(ourdata) {
+            // console.log(ourdata)
+
+            let st = "";
+            let mydata = JSON.parse(ourdata);
+            console.log(mydata[0].name)
+
+            for (let i = 0; i < mydata.length; i++) {
+                // console.log(mydata[i])
+
+                st += "<p>" + mydata[i].name + "</p>";
+                para.insertAdjacentHTML("beforeend", st)
+                para2.innerHTML += "<p>" + "Hi, welcome" + " " + mydata[i].name + " " + "you are" + " " + mydata[i].age + " " + "years old" + "</p>"
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
