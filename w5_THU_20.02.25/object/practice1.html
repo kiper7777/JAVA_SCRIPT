@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+
+<body>
+    <!-- Write a program to create Employee details which has 
+     fName , lName, Age, Salary, Address. Display the value. -->
+
+    <h1>Employee Details</h1>
+    <div id="employeeDetails"></div>
+
+    <script>
+        let employee = {
+            fName: "John",
+            lName: "Smith",
+            age: 37,
+            salary: 70000,
+            address: "1 High St, London, UK"
+        };
+
+        let details = `
+            <p><strong>First Name:</strong> ${employee.fName}</p>
+            <p><strong>Last Name:</strong> ${employee.lName}</p>
+            <p><strong>Age:</strong> ${employee.age}</p>
+            <p><strong>Salary:</strong> £${employee.salary.toLocaleString()}</p>
+            <p><strong>Address:</strong> ${employee.address}</p>
+        `;
+
+        document.getElementById("employeeDetails").innerHTML = details;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let emp1 = {
+            name: "John",
+            lastname: "Smith",
+            work_experience: 4,
+            sayhello: function () {
+                console.log("Hi I am John")
+            },
+            message: () => {
+                console.log("Hi I am the new emploee")
+            },
+            laptop: {
+                brand: 'MacBook Pro',
+                ram: 32,
+                year: () => {
+                    console.log("This is manufactured in 1920")
+                }
+            }
+        }
+        console.log(typeof (emp1))
+
+        console.log(emp1.laptop.brand)
+        console.log(emp1.laptop.year)
+        // console.log(emp1)
+        // console.log(emp1.name)
+        // console.log(emp1['name'])
+        // console.log(emp1.work_experience)
+        // console.log(emp1.sayhello)
+        // console.log(emp1.message)
+
+        // for loop
+        // while loop
+        // do while
+        // foreach
+        // for of
+        // for in
+
+        let emp2 = {
+            name: "Dan",
+            lastname: "Smith",
+            age: 32
+        }
+
+        for (let key in emp2) {
+            console.log(emp2[key]);
+        }
+
+    </script>
+
+</body>
+
+</html>
