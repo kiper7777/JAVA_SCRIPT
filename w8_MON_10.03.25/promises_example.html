@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        new Promise(function (resolve, reject) {
+            let emp = [
+                { name: "Robbin", age: 32 },
+                { name: "Rob", age: 42 },
+                { name: "Tom", age: 72 },
+                { name: "Dan", age: 52 },
+            ]
+            let error = false;
+            if (!error) {
+                resolve(emp)
+            } else {
+                reject("error")
+            }
+        }).then(function (userdata) {
+            console.log(userdata)
+            empname = userdata[0]['name'];
+            console.log(empname)
+        }).catch(function () {
+            console.log("error")
+        }).finally(function () {
+
+            console.log("the request either resolve or rejected")
+        })
+
+    </script>
+</body>
+
+</html>
