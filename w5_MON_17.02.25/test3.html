@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <h1 class="heading" id="heading"> I am in DOM </h1>
+        <p class="para" id="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit velit quod ad, vero atque quia? Recusandae
+            tenetur,necessitatibus maiores numquam aspernatur pariatur modi rerum
+            atque nobis reprehenderit aliquid, dolore sint!
+
+            Hello!
+
+        </p>
+        <nav>
+            <ul id="freelancer">
+                <li class="item">Name</li>
+                <li class="item">Skills</li>
+                <li class="item price">Cost</li>
+                <li class="item">Projects</li>
+            </ul>
+        </nav>
+
+        <ul class="list-group">
+            <li class="list">PHP</li>
+            <li class="list">PHP</li>
+            <li class="list">PHP</li>
+        </ul>
+
+        <ul>
+            <li class="list-item">Java</li>
+            <li class="list-item">Java</li>
+            <li class="list-item">Java</li>
+        </ul>
+
+    </header>
+    <script>
+
+        const page_title = document.querySelector('#heading');
+        console.log(page_title);
+
+        const items = document.querySelector(".para");
+        console.log(items);
+
+        var element = document.querySelectorAll('ul')
+        console.log(element)
+
+        const container = document.querySelectorAll('p')
+        console.log(container);
+
+        var para = document.querySelector('ul').innerText
+        console.log(para)
+
+        var n = document.querySelector('#heading').innerHTML
+        console.log(n)
+
+        var element = document.querySelector('#header p')
+        console.log(element)
+
+
+        var element = document.querySelector('ul')
+        console.log(element)
+
+        var element1 = element.querySelectorAll('li')
+        console.log(element)
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

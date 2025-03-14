@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 2px solid rgb(64, 61, 4);
+            border-radius: 6px;
+            background-color: yellow;
+            display: inline-block;
+            padding: 10px;
+            margin: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Create Box and Delete</h1>
+    <button onclick="addBox()">Add Box</button>
+    <button onclick="deleteBox()">Delete Box</button>
+
+    <div id="boxContainer"></div>
+
+    <script>
+        function addBox() {
+            const newBox = document.createElement('div');
+            newBox.classList.add('box');
+            newBox.textContent = 'New Box';
+
+            const container = document.getElementById('boxContainer');
+            container.appendChild(newBox);
+        }
+
+        function deleteBox() {
+            const container = document.getElementById('boxContainer');
+            const lastBox = container.lastElementChild;
+            if (lastBox) {
+                container.removeChild(lastBox);
+            } else {
+                alert('No boxes to delete!')
+            }
+        }
+
+    </script>
+</body>
+
+</html>

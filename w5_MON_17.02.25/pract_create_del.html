@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add, Delete and Bounce Node</title>
+    <style>
+        /* Стиль для контейнера */
+        #nodeContainer {
+            margin-top: 20px;
+        }
+
+        /* Стиль для каждого узла */
+        .node {
+            padding: 10px;
+            margin: 5px;
+            background-color: lightblue;
+            border-radius: 5px;
+            display: inline-block;
+            /* text-align: center; */
+            font-size: 16px;
+            animation: bounce 0.5s ease-in-out;
+            /* Анимация "прыжка" */
+        }
+
+        /* Определение анимации для прыжка */
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            25% {
+                transform: translateY(-10px);
+            }
+
+            50% {
+                transform: translateY(0);
+            }
+
+            75% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Node Addition, Deletion, and Bounce</h1>
+
+    <button onclick="addNode()">Add Node</button>
+    <button onclick="deleteNode()">Delete Node</button>
+
+    <div id="nodeContainer">
+        <!-- Узлы будут добавляться сюда -->
+    </div>
+
+    <script>
+        // Функция для добавления нового узла
+        function addNode() {
+            // Создаём новый элемент div для узла
+            const newNode = document.createElement('div');
+            newNode.classList.add('node');
+            newNode.textContent = 'New Node';
+
+            // Добавляем новый узел в контейнер
+            const container = document.getElementById('nodeContainer');
+            container.appendChild(newNode);
+        }
+
+        // Функция для удаления последнего узла
+        function deleteNode() {
+            const container = document.getElementById('nodeContainer');
+            const lastNode = container.lastElementChild;
+
+            // Если есть узел, удаляем последний
+            if (lastNode) {
+                container.removeChild(lastNode);
+            } else {
+                alert('No nodes to delete!');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header" id="header">
+        <h1 id="h">DOM</h1>
+    </div>
+
+
+    <div class="nav">
+        <h1 id="nav">Navigation</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor alias quis harum molestias. Et ut delectus
+            temporibus iusto sit at dolorem architecto dolores reiciendis est, rerum molestias voluptate ab illo.</p>
+    </div>
+
+    <button id="btn">Submit</button>
+
+    <script>
+        // var pet = {
+        //     name: 'cooper',
+        //     type: 'Dog'
+        // }
+        // document.write(pet.name)
+        // pet.color = 'black'
+        // document.write(pet.color)
+
+        // console.log(pet);
+
+        // <marquee onmouseover="stop()" onmouseout="start()" > SAE web student</marquee>
+
+        document.getElementById('btn').onclick = hello;
+        function hello() {
+            alert("Confirm?")
+            document.getElementById('btn').style.backgroundColor = 'pink'
+        }
+
+        document.getElementById('header').addEventListener('click', hi)
+        function hi() {
+            document.getElementById('header').style.backgroundColor = 'purple'
+            // alert("Confirm?")
+        }
+
+        document.getElementById('nav').addEventListener('mouseenter', function () {
+            document.getElementById('nav').style.border = '2px dotted blue'
+        })
+        document.getElementById('nav').addEventListener('mouseout', function () {
+            document.getElementById('nav').style.border = ''
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>
