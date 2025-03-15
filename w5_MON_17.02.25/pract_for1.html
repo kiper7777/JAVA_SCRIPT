@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Numbers from 1 to 5</title>
+</head>
+
+<body>
+    <!-- 1. Display Numbers from 1 to 5 -->
+    <h1>Numbers from 1 to 5</h1>
+    <div id="numberContainer"></div> <!-- Место для отображения цифр -->
+
+    <script>
+        // Функция для отображения цифр от 1 до 5
+        function displayNumbers() {
+            const container = document.getElementById('numberContainer');
+
+            // Цикл от 1 до 5
+            for (let i = 1; i <= 5; i++) {
+                const numberElement = document.createElement('div'); // Создаём элемент для каждой цифры
+                numberElement.textContent = i; // Устанавливаем текст цифры
+                container.appendChild(numberElement); // Добавляем элемент в контейнер
+            }
+        }
+
+        // Вызываем функцию для отображения чисел
+        displayNumbers();
+    </script>
+
+    <!-- 2. Sum of Positive Numbers Only -->
+    <h1>Sum of Positive Numbers</h1>
+    <div id="result"></div> <!-- Место для отображения результата -->
+
+    <script>
+        // Массив чисел, из которых будем вычислять сумму только положительных чисел
+        const numbers = [1, -2, 3, 4, -5, 6, -7];
+
+        // Функция для вычисления суммы положительных чисел
+        function sumPositiveNumbers(arr) {
+            let sum = 0; // Переменная для хранения суммы
+
+            // Проходим по массиву чисел
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > 0) { // Проверяем, положительное ли число
+                    sum += arr[i]; // Если да, добавляем его к сумме
+                }
+            }
+
+            return sum; // Возвращаем итоговую сумму
+        }
+
+        // Вычисляем сумму положительных чисел и отображаем результат
+        const positiveSum = sumPositiveNumbers(numbers);
+        document.getElementById('result').textContent = `Sum of positive numbers: ${positiveSum}`;
+    </script>
+
+</body>
+
+</html>

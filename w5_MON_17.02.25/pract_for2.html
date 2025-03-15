@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+
+<body>
+
+    <h1>Create Your Product List</h1>
+
+    <div id="productList"></div> <!-- Место для отображения списка продуктов -->
+
+    <script>
+        // Пустой массив для хранения продуктов
+        let productList = [];
+
+        // Функция для добавления продуктов в список
+        function addProduct() {
+            let product = prompt("Enter a product name to add to your list (or type 'done' to finish):");
+
+            // Цикл продолжается до тех пор, пока пользователь не введет 'done'
+            while (product.toLowerCase() !== 'done') {
+                if (product) {
+                    productList.push(product); // Добавляем продукт в массив
+                }
+                product = prompt("Enter another product (or type 'done' to finish):");
+            }
+
+            // Отображаем список продуктов
+            displayProductList();
+        }
+
+        // Функция для отображения списка продуктов
+        function displayProductList() {
+            const container = document.getElementById('productList');
+            container.innerHTML = "<h2>Your Product List:</h2>";
+
+            if (productList.length > 0) {
+                const ul = document.createElement('ul');
+
+                // Проходим по массиву и создаем список
+                for (let i = 0; i < productList.length; i++) {
+                    const li = document.createElement('li');
+                    li.textContent = productList[i];
+                    ul.appendChild(li);
+                }
+
+                container.appendChild(ul); // Добавляем список продуктов в контейнер
+            } else {
+                container.innerHTML += "<p>No products added yet.</p>";
+            }
+        }
+
+        // Запуск функции добавления продуктов
+        addProduct();
+    </script>
+
+</body>
+
+</html>
