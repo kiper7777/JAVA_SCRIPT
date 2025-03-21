@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Радио кнопки -->
+    <label>
+        <input type="radio" id="radio" name="radio-group" value="Option 1"> Option 1
+    </label>
+    <br>
+    <label>
+        <input type="radio" id="radio1" name="radio-group" value="Option 2"> Option 2
+    </label>
+    <br>
+
+    <!-- Кнопка для отправки выбора -->
+    <button id="submit">Submit</button>
+    <script>
+        btn = document.querySelector('#submit')
+        btn.addEventListener('click', function rd() {
+            var rd1 = document.querySelector('#radio')
+            var rd2 = document.querySelector('#radio1')
+            if (rd1.checked === true) {
+                alert(rd1.value)
+            }
+            else {
+                alert(rd2.value)
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="title">
+        <h1>My List</h1>
+    </header>
+
+    <section id="list_para">
+        <h1>Document</h1>
+        <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Consectetur, sint.</p>
+        <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Quis itaque doloribus quidem.</p>
+    </section>
+
+    <div id="sec1">
+        <ul>
+            <li>Apple</li>
+            <li>Sony</li>
+            <li>Samsung</li>
+        </ul>
+    </div>
+
+</body>
+
+<script>
+    var list = document.querySelector('li:nth-child(2)')
+    console.log(list)
+    list.style.color = "red"
+
+    var list = document.querySelector("li:first-child")
+    console.log(list)
+
+    var list_last = document.querySelector("li:last-child").style.border = "1px solid red"
+    console.log(list_last)
+
+
+
+
+    // var a = document.querySelectorAll('#sec1>ul>li')
+    // console.log(a)
+    // for (i = 0; i < a.length; i++) {
+    //     a[i].style.color = "red"
+    //     a[i].style.border = "2px dotted red"
+    //     a[i].style.backgroundColor = "lightblue"
+    // }
+
+
+    // document.querySelector('#title').style.color = "blue"
+
+    // var elements = document.querySelector('#list_para')
+    // console.log(elements)
+    // elements.style.color = "red"
+
+
+    // var para = document.querySelectorAll('.para')
+    // console.log(para)
+
+    // for (i = 0; i < para.length; i++) {
+    //     para[i].style.color = 'green'
+    // }
+
+    // var main_para = document.querySelector("#list_para")
+    // console.log(main_para)
+    // main_para.querySelector('h1').style.backgroundColor = "pink"
+    // var all_para = main_para.querySelectorAll('.para')
+    // for (i = 0; i < all_para.length; i++) {
+    //     all_para[i].style.backgroundColor = "grey"
+    //     all_para[i].style.color = 'red'
+    // }
+
+    // var sub_elements = document.querySelectorAll('h1,p')
+    // console.log(sub_elements)
+    // for (i = 0; i < sub_elements.length; i++)
+    //     sub_elements[i].style.color = 'green'
+
+
+    // var a = document.querySelectorAll('p a')
+    // console.log(a)
+
+
+
+</script>
+
+</html>

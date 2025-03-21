@@ -9,7 +9,6 @@
 
 <body>
 
-
     <script>
         let student = new Object();
         student.name = "John";
@@ -27,8 +26,8 @@
             }
         }
 
-        let fname = emp.fullname();
-        console.log(fname)
+        let fullname = emp.fullname();
+        console.log(fullname)
 
         let studentLon = [
             { name: 'Dan', lname: 'Kate', course: 'web' },
@@ -39,48 +38,48 @@
         console.log(studentLon)
 
         for (let i = 0; i < studentLon.length; i++) {
-            console.log(studentLon[i].name)
+            console.log(studentLon[i].course)
             console.log("************")
         }
 
 
 
-        // console.log(emp.fullname())
+        console.log(emp.fullname())
 
         //how to add new property into the object
-        // emp.age = 32;
-        // console.log(emp)
+        emp.age = 32;
+        console.log(emp)
 
-        // delete emp.lname
-        // console.log(emp)
+        delete emp.lname
+        console.log(emp)
 
         console.log("************")
 
         //array_method
-        let num = [10, 20, 30, 40];
-        let new_num = num.map(multiplicationNos);
-        console.log(new_num)
-        for (let j = 0; j < new_num.length; j++) {
-            document.write(`${new_num[j]} <br>`)
-        }
+        // let num = [10, 20, 30, 40];
+        // let new_num = num.map(multiplicationNos);
+        // console.log(new_num)
+        // for (let j = 0; j < new_num.length; j++) {
+        //     document.write(`${new_num[j]} <br>`)
+        // }
 
-        for (let n in new_num) {
-            document.write(new_num[n])
-        }
+        // for (let n in new_num) {
+        //     document.write(new_num[n])
+        // }
 
-        function multiplicationNos(x) {
-            let n = x * 2;
-            return n;
-        }
-        //
-        let new_num1 = num.map((x) => {
-            let n = x * x;
-            return n;
-        })
+        // function multiplicationNos(x) {
+        //     let n = x * 2;
+        //     return n;
+        // }
+        // //
+        // let new_num1 = num.map((x) => {
+        //     let n = x * x;
+        //     return n;
+        // })
 
-        for (let m = 0; m < new_num1.length; m++) {
-            document.write(`${new_num1[m]} <br>`)
-        }
+        // for (let m = 0; m < new_num1.length; m++) {
+        //     document.write(`${new_num1[m]} <br>`)
+        // }
 
 
 

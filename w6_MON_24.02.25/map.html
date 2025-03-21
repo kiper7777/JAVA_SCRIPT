@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let nums = new Set();
+        // nums.add(1)
+        // nums.add(2)
+        // nums.add(3)
+        // nums.add(4)
+        // nums.add(5)
+        // nums.add(6)
+        // console.log(nums);
+        // console.log(nums.size);
+
+        // var set = new Set();
+        // set.add('jQuery');
+        // set.add('Bootstrap');
+        // console.log(set)
+        // document.write(set.has("Bootstrap"));
+
+        // let nums1 = new Set();
+        // nums1.add(1)
+        // nums1.add(2)
+        // nums1.add(3)
+        // nums1.add(4)
+        // console.log(nums1.size);
+        // console.log(nums1.delete(2));
+        // console.log(nums1);
+        // console.log(nums1.size);
+
+        // let nums = new Set();
+        // nums.add(1)
+        // nums.add(2)
+        // nums.add(3)
+        // nums.add(4)
+        // for (element of nums) {
+        //     document.write(element);
+        // }
+
+
+        // var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        // var mySet = new Set(arr);
+        // document.write(mySet.size)
+        // document.write(`<br>`)
+
+        // for (ele of arr) {
+        //     document.write(`${ele} <br>`)
+        // }
+        // for (ele of mySet) {
+        //     document.write(ele)
+        // }
+
+        // var batchno = [1, 2, 3, 2, 3, 4, 5, 6, 7, 1, 1, 1, 1, 2, 3, 5]
+        // console.log(batchno)
+        // var arrSet = [...new Set(batchno)];
+        // console.log(arrSet)
+
+        const myMap = new Map();
+        const k1 = "mystr",
+            k2 = {},
+            k3 = function () { };
+        myMap.set(k1, "string")
+        myMap.set(k2, "this is a blank object")
+        myMap.set(k3, "This is an empty function")
+        console.log(myMap)
+
+
+        let data = new Map([
+            ['name', 'peter'],
+            [true, 'this is bool key in map']]
+        )
+        console.log(data)
+
+        let value1 = myMap.get(k1);
+        console.log(value1)
+
+        let value2 = myMap.get(k2);
+        console.log(value2)
+
+        data.set('city', 'london')
+        console.log(data)
+
+        data.delete(true)
+        console.log(data)
+
+        let size = myMap.size
+        console.log(size);
+
+        for ([key, value] of myMap) {
+            document.write(`${key}, ${value} <br>`);
+        }
+
+
+        document.write(`<br>`)
+        for (key of myMap.keys()) {
+            document.write(key)
+        }
+
+
+        document.write(`<br>`)
+        for (value of myMap.values()) {
+            document.write(value)
+        }
+
+
+        document.write(`<br>`)
+        myMap.forEach((key, value) => {
+            document.write(`<br> key is  ${key}`)
+            document.write(`value is   ${value}`)
+        })
+
+
+        let myarray = Array.from(myMap)
+        console.log(myarray)
+
+        var key = Array.from(myMap.keys())
+        {
+            console.log(key)
+        }
+        var value = Array.from(myMap.values())
+        console.log(value)
+
+
+
+
+
+    </script>
+</body>
+
+</html>

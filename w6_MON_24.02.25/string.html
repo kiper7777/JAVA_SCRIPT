@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = {
+            fname: 'John',
+            lname: 'Smith',
+            age: 30,
+            Lang: ['java', 'php', 'python'],
+            fullname: function ()   // method
+            {
+                return this.fname + " " + this.lname
+            },
+            living: {
+                city: 'london',
+                country: 'UK',
+            }
+        }
+        a.totalexperience = 10;
+        a.color = 'white';
+        delete a.color;
+        console.log(a)
+
+
+        let b = {
+            fname: 'John',
+            lname: 'Smith',
+            age: 30,
+            Lang: ['java', 'php', 'python'],
+            living: {
+                city: 'london',
+                country: 'UK',
+            }
+        }
+
+        b.name = function () {
+            return this.fname + " " + this.lname;
+        };
+
+        let student = [
+            { name: 'kevin', age: 21 },
+            { name: 'John', age: 23 },
+            { name: 'Tom', age: 42 },
+            { name: 'Danish', age: 62 },
+        ]
+        console.log(student[2])
+
+        for (let i = 0; i < student.length; i++) {
+            document.write(student[i].name + student[i].age + '<br>')
+        }
+
+        // let array = ['wolf', 'apple', 'box']
+        // console.log(typeof (array))
+        // console.log(Array.isArray(array))
+
+        // let array1 = array.toString()
+        // console.log(array1)
+        // console.log(typeof (array1))
+        // console.log(Array.isArray(array1))
+
+        var name = "I am John"
+        var name1 = 'I am in SAE'
+        var name2 = `I am a web student`
+        var name3 = new String('I am in SAE london')
+        console.log(name)
+        console.log(name1)
+        console.log(name2)
+        console.log(name3)
+
+        var str1 = new String("hello")
+        document.write(`<br>type of string created by new is  ${typeof (str1)} <br>`)
+        let str = 'hello world'
+        document.write(` ${typeof (str)}<br>`)
+
+
+        var name = 'Tim'
+        age = 22
+        var string = `His name is ${name}. He is ${age} years old.`
+        document.write(string)
+
+
+        var string1 = `This is a multiline string`;
+        console.log(`${string1} <br>`)
+        console.log(string1)
+
+        document.write('<br>')
+
+        var name = 'Tim'
+        var ch1 = name[0]
+        var ch2 = name[1]
+        var ch3 = name[2]
+        document.write(ch1, '<br>')
+        document.write(ch2, '<br>')
+        document.write(ch3, '<br>')
+
+        var c1 = name.at(0)
+        var c2 = name.at(1)
+        var c3 = name.at(2)
+        console.log(c1)
+        console.log(c2)
+        console.log(c3)
+
+        var name = "Hello everybody!"
+        let result = name.length
+        document.write(result)
+
+        let str2 = 'hello world'
+        for (i = 0; i < str.length; i++)
+            document.write(`str2 [${i}] = ${str2[i]} <br>`)
+
+        for (s of str2) {
+            document.write(s)
+        }
+
+
+        result1 = name.charAt(3);
+        console.log(result1)
+
+        var result2 = name.indexOf('John')
+        console.log(result2)
+
+        var result2 = name.indexOf('am', 4)
+        console.log(result2)
+
+        var str3 = "Hello@world@How's everything"
+        document.write(str3.indexOf('@'))
+        document.write(str3.lastIndexOf('@'))
+
+
+        let str4 = "I am in SAE"
+        console.log(str4.includes('SAE'))
+
+        let str5 = "I am in SAE. Today we are learning javascript"
+        console.log(str5.replace('javascript', 'php'))
+
+
+        var str6 = " welcome "
+        document.write(str6)
+        document.write('<br>')
+        document.write(`length of string with whitespace : ${str6.length} <br>`)
+        var trim_str = str6.trim()
+        document.write(` after using trim() method ${trim_str.length}`)
+
+        document.write('<br>')
+        let str7 = '12345 6789'
+        var str_slice = str7.slice(2, 5);
+        document.write(str_slice)
+
+        document.write('<br>')
+        var str_slice2 = str7.slice(2);
+        document.write(str_slice2)
+
+        document.write('<br>')
+        const myString = "I am learning JavaScript"
+        document.write(myString.substring(2, 6))
+
+        var str8 = "welcome"
+        var substr = str8.substr(2, 4)
+        document.write(substr)
+        document.write("<br>", str8, "\t", "substr :", substr)
+        document.write(`<br>${str8} \t and substr ${substr}`)
+
+        document.write('<br>')
+        var str9 = "Welcome"
+        var lower = str9.toLowerCase()
+        document.write(lower)
+
+        var str3 = "welcome"
+        var upper = str3.toUpperCase()
+        document.write(upper)
+
+        var num = 12;
+        console.log(typeof (num))
+        var st = num.toString()
+        console.log(typeof (st))
+
+        var txt = "c,c++,java,python,php"
+        console.log(txt)
+        var txt_split = txt.split(',')
+        console.log(txt_split)
+
+        let str_txt = 'John,,1990,,,,,,,web developer'
+        console.log(str_txt.split(/,+/))
+
+        var str10 = "c,java,c++,html,javascript,python,php"
+        var r = /\w{3,6}/g
+        console.log(str10.replace(r, 'web'))
+
+
+    </script>
+</body>
+
+</html>
