@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            width: 70vw;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 5px;
+            grid-row-gap: 0px;
+        }
+
+        .btn span {
+            cursor: pointer;
+            text-align: center;
+            padding: 10px;
+            background-color: lightgray;
+            border-radius: 5px;
+            user-select: none;
+        }
+
+        #purple {
+            background-color: purple;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>First project</h1>
+    <div class="btn">
+        <span id="blueviolet" style="background-color: blueviolet;">Button 1</span>
+        <span id="yellow" style="background-color: yellow;">Button 2</span>
+        <span id="green" style="background-color: green;">Button 3</span>
+        <span id="pink" style="background-color: pink;">Button 4</span>
+        <span id="purple">Purple</span>
+    </div>
+
+    <script>
+        let body = document.querySelector("body");
+
+        let buttons = document.querySelectorAll(".btn span");
+
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function (e) {
+                console.log(e);
+                console.log(e.target.id);
+                if (e.target.id === 'blueviolet') {
+                    // body.style.backgroundColor = 'rgb(243,195,177)';
+                    body.style.backgroundColor = e.target.style.backgroundColor;
+                }
+                if (e.target.id === 'yellow') {
+                    body.style.backgroundColor = e.target.style.backgroundColor;
+                }
+                if (e.target.id === 'green') {
+                    body.style.backgroundColor = e.target.style.backgroundColor;
+                }
+                if (e.target.id === 'pink') {
+                    body.style.backgroundColor = e.target.style.backgroundColor;
+                }
+                if (e.target.id === 'purple') {
+                    body.style.backgroundColor = 'purple';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

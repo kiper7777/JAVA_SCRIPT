@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <style>
+        form {
+            margin: 100px auto;
+        }
+
+        .input {
+            padding: 10px;
+        }
+
+        #form {
+            border: 2px solid black;
+            background-color: rgb(232, 224, 184);
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" id="form">
+        <h1>Personal Details</h1>
+
+        <select name="course" id="course">
+            <option value="Mr">Mr</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Ms">Ms</option>
+            <option value="Mss">Mss</option>
+        </select>
+
+        <div class="input">
+            <label for="">First name</label>
+            <input type="text" name="name" id="name">
+        </div>
+
+        <div class="input">
+            <label for="">Last name</label>
+            <input type="text" name="location" id="loc">
+        </div>
+
+        <div class="input">
+            <label for="">Gender</label>
+            <input type="radio" name="radio" id="gender">
+
+
+        </div>
+
+        <input type="submit" value="submit" id="submit">
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            $('#name,#loc,#course').focus(function () {
+                $(this).css("background-color", "gray")
+            })
+
+            $('#name').blur(function () {
+                $(this).css("background-color", "")
+            })
+
+            $('#form').submit(function () {
+                alert("Submitted data sucessfully!")
+            })
+
+            $('#name').change(function () {
+                $(this).css("background-color", "yellow")
+            })
+
+
+            $('#submit').click(function (e) {
+                e.preventDefault();
+                $('h1').html("jQuery class").css({ "color": "red", "background-color": "gray" })
+
+                let name = $("#name").val()
+                console.log(name)
+
+                let location = $("#loc").val()
+                console.log(location)
+
+                let course = $("#course").val()
+                console.log(course)
+
+
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>

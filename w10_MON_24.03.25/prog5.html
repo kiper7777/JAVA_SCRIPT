@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <style>
+        form {
+            margin: 100px auto;
+        }
+
+        .input {
+            padding: 10px;
+        }
+
+        #form {
+            border: 2px solid black;
+            background-color: pink;
+            width: 400px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" id="form">
+        <div class="input">
+            <h1>Form element</h1>
+            <label for="">Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+
+        <div class="input">
+            <label for="">Location</label>
+            <input type="text" name="location" id="loc">
+        </div>
+
+        <select name="course" id="course">
+            <option value="html">html</option>
+            <option value="css">css</option>
+            <option value="php">php</option>
+            <option value="python">python</option>
+        </select>
+
+        <input type="submit" value="submit" id="submit">
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            $('#name,#loc,#course').focus(function () {
+                $(this).css("background-color", "gray")
+            })
+
+            $('#name').blur(function () {
+                $(this).css("background-color", "")
+            })
+
+            $('#form').submit(function () {
+                // $('.container').css("background-color", "green")
+                alert("Submitted data sucessfully!")
+            })
+
+            $('#name').change(function () {
+                $(this).css("background-color", "yellow")
+            })
+
+            //set get data
+            //html(), text()
+            let val = $('h1').html()
+            console.log(val)
+
+            // let val1 = $('h1').text()
+            // console.log(val1)
+
+            // let val2 = $('h1').attr('id')
+            // console.log(val2)
+
+            $('#submit').click(function (e) {
+                e.preventDefault();
+                $('h1').html("jQuery class").css({ "color": "red", "background-color": "gray" })
+
+                //get
+                let name = $("#name").val()
+                console.log(name)
+
+                let location = $("#loc").val()
+                console.log(location)
+
+                let course = $("#course").val()
+                console.log(course)
+
+
+
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>

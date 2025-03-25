@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> -->
+
+    <style>
+        .container {
+            height: 400px;
+            ;
+            width: 400px;
+            margin: 100px auto;
+            border: 1px solid red;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading">jQuery</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae veniam expedita voluptas enim ab
+            dicta possimus. Facilis quas eaque, aperiam est suscipit sequi fuga non eos exercitationem atque placeat
+            quisquam?</p>
+
+        <ul id="list">
+            <li id="list1">HTML</li>
+            <li id="list2">CSS</li>
+            <li id="list3">PHP</li>
+            <li id="list4">Python</li>
+        </ul>
+        <ul id="secondlist">
+            <li id="list5">HTML</li>
+            <li id="list6">CSS</li>
+            <li id="list7">PHP</li>
+            <li id="list8">Python</li>
+        </ul>
+
+        <button type="button" id="btn">Submit</button>
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            $('.container').mouseleave(function () {
+                $('h1').css("background-color", "white")
+            })
+
+            $('.container').mouseup(function () {
+                $('#para').css("color", "red")
+            })
+
+            $('.container').mousedown(function () {
+                $('#para').css("color", "brown")
+            })
+
+            $('.container').dblclick(function () {
+                $(this).css("background-color", "orange")
+            })
+
+            $('.container').mouseenter(function () {
+                $(this).css("background-color", "skyblue")
+            })
+
+            $('.container').mouseleave(function () {
+                $(this).css("background-color", "green")
+            })
+
+
+            // $('#btn').click(function () {
+            //     $('.container').css("background-color", "purple")
+            // })
+
+
+
+            // let h1 = document.getElementById('h1')
+            // let text = $('h1').html()
+            // let text1 = $('#heading').html()
+
+            // $("#heading").css({ "color": "red", "background-color": "yellow", "border": "2px dotted black" })
+
+            // $('*').css('color', 'grey')
+
+            // $('ul li').css('color', 'red')
+
+            // $('li:first').css("background-color", "purple")
+
+            // $('li:first-child').css("background-color", "purple")
+
+            // $('li:last-child').css("background-color", "green")
+
+            // $('ul li:first').css("background-color", "gray")
+
+            // $('li:first-child').css("background-color", "gray")
+
+            // $('li:even').css("background-color", "blue")
+
+            // $('li:odd').css("background-color", "red")
+
+            // $("#heading,p").css({ "border": "yellow", "border": "4px solid red" })
+
+            //filter
+            // $("li:gt(2)").css("color", "green")
+            // $("li:lt(2)").css("color", "red")
+            // $("li:eq(2)").css("color", "blue")
+
+
+            $('h1').css("background-color", "red").hide(2000).show(1000)
+
+            //events
+
+
+
+        })
+
+    </script>
+
+</body>
+
+</html>

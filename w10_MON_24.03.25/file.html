@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list">
+        <li id="list1">HTML</li>
+        <li id="list2">CSS</li>
+        <li id="list3">PHP</li>
+        <li id="list4">Python</li>
+    </ul>
+
+    <a id="link" href="https://www.w3schools.com/html/">Link</a>
+
+    <script>
+        document.getElementById("list").addEventListener("click", function (e) {
+            console.log(e)
+            console.log('click html')
+
+            let removeid = e.target;
+            console.log(removeid)
+            removeid.remove()
+
+            console.log(e.target.id)
+            // e.stopPropagation()
+        }, false)
+
+        document.getElementById("list1").addEventListener("click", function (e) {
+            console.log(e)
+            console.log('click ul')
+
+            // e.preventDefault()
+        }, false)
+
+
+        // removeid.parentNode.removeChild(removeid)
+
+    </script>
+</body>
+
+</html>
