@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //map,filter,reduce
+        let arr = [1, 2, 3, 4, 5, 6, 7]
+        function square() {
+            return x * 2
+        }
+
+        function filterval(x) {
+            return x % 2;
+        }
+        let output3 = arr.filter(filterval)
+        console.log(output3)
+
+        //find numbers whith is greater than 2
+
+        function greater(x) {
+            return x > 2
+        }
+        let output4 = arr.filter(greater)
+        console.log(output4)
+
+        //reduce
+        let arr1 = [1, 2, 3, 4, 5, 6, 7]
+        let sum = 0;
+        function addnums(arr1) {
+            for (let i = 0; i < arr1.length; i++) {
+                sum += arr1[i];
+            }
+            return sum;
+        }
+        console.log(addnums(arr1))
+
+        //reduce
+        let result = arr.reduce(function addnums(acc, curr) {
+            acc += curr
+            return acc
+        }, 0)
+        console.log(result)
+
+
+        const user = [
+            { firsname: "John", lastname: "Smith", age: 30 },
+            { firsname: "Robin", lastname: "Smith", age: 25 },
+            { firsname: "Tom", lastname: "Kate", age: 44 },
+            { firsname: "Marry", lastname: "Robert", age: 25 },
+        ]
+        // user.map(el => console.log(el.firsname + '' + el.lastname))
+        // const arr2 = [1, 2, 3, 4, 5]
+
+        // const outp = arr.reduce((acc, num) => {
+        //     return num > acc ? acc = num : acc = 0
+        // }, 0)
+        // console.log(outp)
+
+
+
+        let output1 = user.map(x => x.firsname + x.lastname)
+        console.log(output1)
+
+        let output2 = user.reduce
+
+
+        //find out largest number from the array
+        //create a object with list of employee and print only full name
+        //from that object will be the output
+        // [1,2,34,45,56,2]
+        // 1=>1,2=>2,34=>1,45=>1,56=>1
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
