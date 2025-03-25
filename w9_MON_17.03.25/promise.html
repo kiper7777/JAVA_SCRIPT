@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 200px;
+            height: 150px;
+            padding: 20px;
+            text-align: center;
+            margin: 50px;
+        }
+
+        .container span {
+            background-color: rgb(241, 238, 46);
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Time</h1>
+        <span id="displaytime"></span>
+    </div>
+
+    <script>
+        function updateTime() {
+            var now = new Date();
+            var hours = now.getHours().toLocaleString().padStart(2, '0');
+            var minutes = now.getMinutes().toLocaleString().padStart(2, '0');
+            var seconds = now.getSeconds().toLocaleString().padStart(2, '0');
+
+            var time = hours + ':' + minutes + ':' + seconds;
+
+            document.getElementById("displaytime").textContent = time;
+
+        }
+
+        setInterval(updateTime, 1000);
+
+    </script>
+</body>
+
+</html>

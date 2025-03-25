@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        setTimeout(function () {
+            console.log("task started")
+        }, 2000);
+
+        setInterval(function () {
+            console.log("We are learning Javascript" + Date.now())
+        }, 6000);
+
+        let time = new Date()
+        console.log(time)
+
+        let day = time.getDay();
+        let year = time.getFullYear();
+        let month = time.getMonth() + 1;
+        let date = time.getDate()
+
+        let current_date = time.toDateString()
+        let datestr = time.toLocaleDateString()
+        let timestr = time.toLocaleTimeString()
+
+        console.log(day)
+        console.log(year)
+        console.log("month " + month)
+        console.log(`current date ${current_date}`)
+        console.log(`current date ${datestr}`)
+        console.log(`current date ${timestr}`)
+
+
+
+    </script>
+</body>
+
+</html>
