@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Exam</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>MY BLOG</h1>
+            <h2>Welcome to the blog of web development</h2>
+            <nav>
+                <a class="active" href="home.html">HOME</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="about.html">ABOUT</a>
+            </nav>
+        </header>
+
+        <div class="left-side">
+            <div class="bottom">
+                <h1>FIRST PROJECT</h1>
+                <h2>Description, <span>April 7, 2019</span></h2>
+                <p class="content">Mauris neque quam, fermentum ut nisl vitae... <span class="more-text">Sed vitae justo
+                        condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</span></p>
+                <button class="btn btn-info read-more">Read More</button>
+                <p>Comments (2)</p>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="bottom">
+                <h2>Linda Smith</h2>
+                <p>Just me, myself and I, exploring the universe of unknownment.</p>
+            </div>
+        </div>
+
+        <div class="form" id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="message" placeholder="Message" required></textarea>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <button class="btn btn-primary"><a href="#">Previous</a></button>
+        <button class="btn btn-primary"><a href="gallery.html">Next</a></button>
+        <p>Powered by web development group</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.read-more').forEach(button => {
+            button.addEventListener('click', function () {
+                this.previousElementSibling.querySelector('.more-text').classList.toggle('d-none');
+                this.textContent = this.textContent === 'Read More' ? 'Read Less' : 'Read More';
+            });
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Form submitted successfully!');
+        });
+    </script>
+</body>
+
+</html>
